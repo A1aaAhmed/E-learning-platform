@@ -13,6 +13,6 @@ A modern platform for accessible STEM education. The site is responsive, feature
 ## Setup
 
 1. Clone or download this repository.
-2. Open the `index.html` file in a web browser to view the platform.
+2. Open the `task2.html` file in a web browser to view the platform.
 3. Use the checkboxes to toggle the menu visibility and switch the color scheme.
 
