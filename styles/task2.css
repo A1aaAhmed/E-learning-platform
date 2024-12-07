@@ -368,7 +368,7 @@ cursor: pointer;
     display: flex;
     flex-wrap: nowrap;
     text-wrap: nowrap;
-    width: 100vw;
+    width: 85vw;
     padding: 1rem;
     overflow: scroll;
     margin-left: 1rem;
