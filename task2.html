@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduTech</title>
+    <title>EduTech Solutions</title>
     <link rel="stylesheet" href="./styles/task2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -24,6 +25,7 @@
                     <a href="#courses">Courses</a>
                     <a href="#Test">Testimonial</a>
                     <a href="#contact">Contact Us</a>
+                    <a href="#create">Create Course</a>
                 </div>
             </nav>
             <section id="hero">
@@ -37,86 +39,7 @@
         <section id="courses">
             <h2>Our Courese </h2>
             <div class='card-group'>
-                <div class="card">
-                    <img src="./assets/course.jpg" alt="course img" class="card-img">
-                    <div class="card-content">
-                        <div class="card-title">Course Name</div>
-                        <p class="card-dis">
-                            Description of the course
-                        </p>
-                        <button class="btn">View Course</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/course.jpg" alt="course img" class="card-img">
-                    <div class="card-content">
-                        <div class="card-title">Course Name</div>
-                        <p class="card-dis">
-                            Description of the course
-                        </p>
-                        <button class="btn">View Course</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/course.jpg" alt="course img" class="card-img">
-                    <div class="card-content">
-                        <div class="card-title">Course Name</div>
-                        <p class="card-dis">
-                            Description of the course
-                        </p>
-                        <button class="btn">View Course</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/course.jpg" alt="course img" class="card-img">
-                    <div class="card-content">
-                        <div class="card-title">Course Name</div>
-                        <p class="card-dis">
-                            Description of the course
-                        </p>
-                        <button class="btn">View Course</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/course.jpg" alt="course img" class="card-img">
-                    <div class="card-content">
-                        <div class="card-title">Course Name</div>
-                        <p class="card-dis">
-                            Description of the course
-                        </p>
-                        <button class="btn">View Course</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/course.jpg" alt="course img" class="card-img">
-                    <div class="card-content">
-                        <div class="card-title">Course Name</div>
-                        <p class="card-dis">
-                            Description of the course
-                        </p>
-                        <button class="btn">View Course</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/course.jpg" alt="course img" class="card-img">
-                    <div class="card-content">
-                        <div class="card-title">Course Name</div>
-                        <p class="card-dis">
-                            Description of the course
-                        </p>
-                        <button class="btn">View Course</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/course.jpg" alt="course img" class="card-img">
-                    <div class="card-content">
-                        <div class="card-title">Course Name</div>
-                        <p class="card-dis">
-                            Description of the course
-                        </p>
-                        <button class="btn">View Course</button>
-                    </div>
-                </div>
+
             </div>
         </section>
         <section id="features">
@@ -156,79 +79,95 @@
                         </p>
                     </div>
                 </div>
-</div>
+            </div>
         </section>
         <section id="testimonial">
             <h2>Testimonial</h2>
             <div class="scroll-container">
-                  <div class="card">
+                <div class="card">
                     <img src="./assets/user.jpg" alt="user icon">
                     <div class="card-content">
                         <div class="card-title">User Name</div>
                         <p class="card-dis">
                             Great Place to study!!
                         </p>
-                        
+
                     </div>
-                  </div>
-             
-                  <div class="card">
+                </div>
+
+                <div class="card">
                     <img src="./assets/user.jpg" alt="user icon">
                     <div class="card-content">
                         <div class="card-title">User Name</div>
                         <p class="card-dis">
                             Great Place to study!!
                         </p>
-                        
+
                     </div>
-                  </div>
-             
-                  <div class="card">
+                </div>
+
+                <div class="card">
                     <img src="./assets/user.jpg" alt="user icon">
                     <div class="card-content">
                         <div class="card-title">User Name</div>
                         <p class="card-dis">
                             Great Place to study!!
                         </p>
-                        
+
                     </div>
-                  </div>
-             
-                  <div class="card">
+                </div>
+
+                <div class="card">
                     <img src="./assets/user.jpg" alt="user icon">
                     <div class="card-content">
                         <div class="card-title">User Name</div>
                         <p class="card-dis">
                             Great Place to study!!
                         </p>
-                        
+
                     </div>
-                  </div>      
-              </div>
-              
+                </div>
+            </div>
+
         </section>
     </main>
+    <section id="create">
+        <form id="createForm" class="contact-form" onsubmit="return false;">
+            <h2>Create new course</h2>
+            <div class="form-group">
+                <label for="title">Course Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter course name" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Course Description</label>
+                <textarea id="description" name="description" placeholder="Enter course description"
+                    required></textarea>
+            </div>
+            <button class="btn" id="sub" type="button">Create</button>
+        </form>
+        <div id="responseMessage" style="margin-top: 10px; color: green;"></div>
+    </section>
     <footer id="contact">
         <form class="contact-form">
             <h2>Contact Us</h2>
             <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="Enter the subject">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter the subject">
             </div>
             <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
             </div>
-            <button  class="btn" type="submit">Send Message</button>
-          </form>
+            <button class="btn" type="submit">Send Message</button>
+        </form>
     </footer>
 </body>
 

@@ -5,60 +5,59 @@
   --backGrayColor: rgba(122, 119, 119, 0.5);
   --navColor: rgb(77, 75, 75);
   --navBackColor: black;
-  --secondary:gray;
+  --secondary: gray;
 }
 
-html{
+html {
   scroll-behavior: smooth; /* Smooth scrolling */
-
 }
-body{
+body {
   margin: 0;
-  padding:0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
-h1{
- font-size:  2.5rem;}
-h2{
- font-size:  2rem;
-padding-top: .3rem;
-padding-left: 4rem;}
-h3{
- font-size:  1.75rem;}
-h4{
- font-size:  1.5rem;}
-p{
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+  padding-top: 0.3rem;
+  padding-left: 4rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+p {
   font-size: 1.4rem;
 }
 header {
-  position: relative; 
-  background-image: url('../assets/background.jpg');
-  background-size: cover; 
+  position: relative;
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
   height: 100vh;
- 
-
 }
-
 
 .header-content {
   padding: 4rem;
   padding-left: 4rem;
-  position: relative; 
-  z-index: 2; 
-  color: var(--textColor); 
+  position: relative;
+  z-index: 2;
+  color: var(--textColor);
   height: 90vh;
   display: flex;
   flex-direction: column;
-
 }
 
 header::before {
-  content: ''; /* Creates the overlay */
+  content: ""; /* Creates the overlay */
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color:var(--backColor); /* Semi-transparent overlay */
+  background-color: var(--backColor); /* Semi-transparent overlay */
   z-index: 1; /* Places the overlay below the content */
 }
 
@@ -73,23 +72,25 @@ header::before {
   z-index: 2; /* Ensures the navbar is above the overlay */
   position: relative;
 }
-a{
-  text-decoration: none; 
-  color:var(--navColor);
+a:not(button > a) {
+  color: var(--navColor);
   font-size: 1.5rem;
   padding: 2rem;
   transition: color 0.3s ease; /* Transition for link color */
-
 }
-a:hover{
+a:not(button > a):hover {
   color: var(--textColor);
 }
-#logo{
-  color:var(--textColor);
+a {
+  text-decoration: none;
+  color: white;
+}
+#logo {
+  color: var(--textColor);
   font-size: 2rem;
   font-weight: bolder;
-  padding-right:5rem ;
-  padding-left:0 ;
+  padding-right: 5rem;
+  padding-left: 0;
 }
 
 #menu-icon,
@@ -101,7 +102,6 @@ a:hover{
 #navbar {
   display: inline-flex;
   justify-content: space-between;
-  
 }
 
 #navbar input {
@@ -120,36 +120,38 @@ input[type="checkbox"] {
   display: none;
 }
 
-#hero{
+#hero {
   padding-top: 30vh;
 }
-.btn{
+.btn {
   padding: 1rem;
   padding-right: 3rem;
   padding-left: 3rem;
   color: var(--textColor);
-  background-color:var(--btnColor);
+  background-color: var(--btnColor);
   border-radius: 5px; /* Optional: rounded corners */
   transition: box-shadow 0.5s ease; /* Smooth transition for shadow effect */
   border: none;
   font-size: 1rem;
-
 }
-.btn:hover {
+.btn:hover:not(#showInfo .btn) {
   box-shadow: 0 20px 10px rgba(0, 0, 0, 0.2); /* Creates a shadow */
   border: 1px solid white;
+}
+.btn:hover {
+  border: 1px solid rgb(5, 5, 5);
 }
 a:active,
 a:focus,
 a:target {
-    color: var(--textColor); /* Active tab color */
-    font-weight: bold; /* Optional: Make the active tab bold */
+  color: var(--textColor); /* Active tab color */
+  font-weight: bold; /* Optional: Make the active tab bold */
 }
-section{
+section {
   align-items: center;
   justify-items: center;
 }
-.card-group{
+.card-group {
   width: 80vw;
   padding-top: 0;
   padding-bottom: 0;
@@ -157,124 +159,127 @@ section{
   grid-template-columns: auto auto auto auto;
   row-gap: 1rem;
   column-gap: 1rem;
-
 }
 
-.card{
+.card {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   height: 42vh;
-  
 }
-.card p{
+.card p {
   padding: 0;
-  margin: .3rem;
-  margin-bottom: .6rem;
+  margin: 0.3rem;
+  margin-bottom: 0.6rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 2rem; /* For limiting height */
+  white-space: nowrap; /* Prevent wrapping */
+  width: 150px; /* Or any fixed value suitable for your design */
 }
-.card-content{
+.card-content {
   padding: 1rem;
-  padding-top: .4rem;
-  padding-bottom: .4rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
   margin: 0;
+  text-overflow: clip;
 }
-.card-title{
+.card-title {
   font-size: 1.3rem;
 }
-.card-dis{
+.card-dis {
   font-size: 1rem;
 }
-.card .btn{
-padding: .7rem;
-font-size: 1rem;
-width: 70%;
-cursor: pointer;
+.card .btn {
+  padding: 0.7rem;
+  font-size: 1rem;
+
+  cursor: pointer;
 }
-.card .btn:hover{
+.card .btn:hover {
   box-shadow: none;
   border: none;
 }
-.card-img{
+.card-img {
   width: 100%;
-  height:50%;
+  height: 50%;
 }
-#features .card-group .card{
-  background-image: url('../assets/course.jpg');
+#features .card-group .card {
+  background-image: url("../assets/course.jpg");
   background-size: contain;
-  background-repeat:round;
+  background-repeat: round;
   transition: transform 0.3s ease; /* Smooth transitions */
   border-radius: 10px;
   justify-content: end;
-  position: relative; 
-  z-index: 2; 
+  position: relative;
+  z-index: 2;
   color: white;
-} 
+}
 
-#features .card-group .card:hover{
+#features .card-group .card:hover {
   transform: scale(1.1); /* Zoom in the element */
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Slightly increase shadow */
 }
 #features .card-group .card::before {
   border-radius: 10px;
 
-  content: ''; /* Creates the overlay */
+  content: ""; /* Creates the overlay */
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color:rgba(5, 0, 0, 0.5);/* Semi-transparent overlay */
+  background-color: rgba(5, 0, 0, 0.5); /* Semi-transparent overlay */
   z-index: 1; /* Places the overlay below the content */
-  }
-  #features .card-group .card .card-content{
-    z-index: 2; 
-  }
+}
+#features .card-group .card .card-content {
+  z-index: 2;
+}
 
-  .contact-form {
-    background: #fff;
-    padding: 4rem;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    height: 70vh;
-    margin: 4rem;
-    margin-bottom: 2rem;
- 
-  }
+.contact-form {
+  background: #fff;
+  padding: 4rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  height: 70vh;
+  margin: 4rem;
+  margin-bottom: 2rem;
+}
 
-  .contact-form h2 {
-    padding: 0;
-    padding-bottom: 1rem;
-    margin: 0;
-    color:var(--navBackColor);
-  }
-  .contact-form label {
-    display: block;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    color: var(--secondary);
-  }
+.contact-form h2 {
+  padding: 0;
+  padding-bottom: 1rem;
+  margin: 0;
+  color: var(--navBackColor);
+}
+.contact-form label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
 
-  .contact-form input,
-  .contact-form textarea {
-    width: 90%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
-  }
+.contact-form input,
+.contact-form textarea {
+  width: 90%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
 
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    border-color: var(--btnColor);
-  }
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--btnColor);
+}
 
-  .contact-form textarea {
-    resize: none;
-    height: 3rem;
-    margin-bottom: 2rem;
-  }
+.contact-form textarea {
+  resize: none;
+  height: 3rem;
+  margin-bottom: 2rem;
+}
 
 /* Scroll container styling */
 .scroll-container {
@@ -284,10 +289,9 @@ cursor: pointer;
   flex-direction: column;
   overflow-y: scroll;
   align-items: center;
-
 }
 
-.scroll-container .card  {
+.scroll-container .card {
   width: 75%;
   text-align: center;
   align-items: center;
@@ -295,9 +299,6 @@ cursor: pointer;
   padding: 2rem;
   margin: 1rem;
   background-color: rgb(136, 133, 133);
-  
-
-
 }
 .scroll-container .card img {
   border-radius: 50%;
@@ -307,15 +308,9 @@ cursor: pointer;
   margin-bottom: 1rem;
 }
 
-
-
-
-
-
-
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 768px) {
-  h1{
+  h1 {
     font-size: 2rem;
   }
   /* When unchecked: show the menu and hide the 'x' icon */
@@ -337,33 +332,33 @@ cursor: pointer;
   input[type="checkbox"]:checked ~ #x-icon {
     display: block;
   }
-  #navbar-container{
+  #navbar-container {
     display: block;
   }
-  #navbar{
+  #navbar {
     width: 100%;
     align-items: center;
   }
   .header-content {
     padding: 2rem;
   }
-  a{
+  a {
     padding: 1rem;
   }
-  #navbar-items{
+  #navbar-items {
     background-color: var(--navBackColor);
     border-radius: 5px;
     align-items: center;
   }
-  #hero{
+  #hero {
     padding-top: 35vh;
   }
-  h2{
-    padding-top:1rem;
-    padding-bottom:1rem;
+  h2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     margin: 0;
   }
-  .card-group{
+  .card-group {
     height: fit-content;
     display: flex;
     flex-wrap: nowrap;
@@ -373,24 +368,25 @@ cursor: pointer;
     overflow: scroll;
     margin-left: 1rem;
   }
-  .card{
-    width:100vw;
+  .card {
+    width: 100vw;
     height: 30vh;
   }
-  .card .btn{
-    padding: .6rem
-    }
-section{ height: fit-content;
-justify-content: center;}
-.contact-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: .5rem;
-  padding: .6rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  width: 90vw;
-}
-
+  .card .btn {
+    padding: 0.6rem;
+  }
+  section {
+    height: fit-content;
+    justify-content: center;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0.6rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 90vw;
+  }
 }
